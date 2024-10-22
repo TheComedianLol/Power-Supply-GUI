@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "modbus.h"
+#include "serial.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,20 +20,33 @@ void MainWindow::on_btnOn_clicked()
 
 }
 
-// turn off power supply
+// Turn off power supply
 void MainWindow::on_btnOff_clicked()
 {
 
 }
 
-// update the OVP value
+// Update the OVP value
 void MainWindow::on_btnUpdateOVP_clicked()
 {
 
 }
 
-// update the OCP value
+// Update the OCP value
 void MainWindow::on_btnUpdateOCP_clicked()
+{
+
+}
+
+// Query for availible ports
+void MainWindow::on_portQuery_clicked()
+{
+    // Calling the method and creating an instance
+    serial serial1;
+    serial1.openPort();
+}
+
+void MainWindow::on_btnOpenPort_clicked()
 {
 
 }

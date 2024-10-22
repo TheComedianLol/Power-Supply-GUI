@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
+#include "serial.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -25,6 +27,10 @@ private slots:
     void on_btnUpdateOVP_clicked();
 
     void on_btnUpdateOCP_clicked();
+
+    void on_portQuery_clicked();
+
+    void on_btnOpenPort_clicked();
 
 private:
     Ui::MainWindow *ui;

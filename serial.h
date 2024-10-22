@@ -1,22 +1,26 @@
 #ifndef SERIAL_H
 #define SERIAL_H
 
+#include <QSerialPort>
+#include <QSerialPortInfo>
+
 class serial
 {
 public:
     serial();
+    void openPort();
+    // ~openPort();
 
 private:
     // VARIABLES
-        // portState
-        // erros
+    // portState
+    // erros
 
     // FUNCTIONS
-        // openSerial()
-        // initializeSerial()
-        // readSeraial()
-        // writeSerial()
-        // closeSerial()
+    // initializeSerial()
+    // readSeraial()
+    // writeSerial()
+     // closeSerial()
 };
 
 #endif // SERIAL_H

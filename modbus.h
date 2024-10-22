@@ -5,6 +5,7 @@ class Modbus
 {
 public:
     Modbus();
+    ~Modbus();
 
 private:
     // VARIABLES
