@@ -9,19 +9,16 @@ class serial
 public:
     serial();
     QStringList openPort();
-
+    void initializeSerial();
+    void writeSerial();
+    QString readSerial();
+    void closeSerial();
     //~serial();
 
 private:
     // VARIABLES
     // portState
     // erros
-
-    // FUNCTIONS
-    // initializeSerial()
-    // readSeraial()
-    // writeSerial()
-    // closeSerial()
 };
 
 #endif // SERIAL_H
