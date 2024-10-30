@@ -50,7 +50,9 @@ void MainWindow::on_portQuery_clicked()
 // Open port that is currently shown in the QStringListPorts
 void MainWindow::on_btnOpenPort_clicked()
 {
+    // Pass selected port to load port method call
+    QString ports = ui->comboBox->currentText();
     serial serial1;
-    serial1.loadPort(ui->comboBox->currentText());
+    serial1.loadPort(ports);
 }
 

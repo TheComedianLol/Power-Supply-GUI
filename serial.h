@@ -10,11 +10,10 @@ public:
     serial();
 
     QStringList queryPort();
-    void loadPort(QString setPort);
-    void writeSerial();
-    QString readSerial();
-    void closeSerial();
-
+    QString     loadPort(QString setPort);
+    void        writeSerial();
+    QString     readSerial();
+    void        closeSerial();
 
 private:
     QSerialPort *_serialPort; // Pointer to the Q serial port class member variable
