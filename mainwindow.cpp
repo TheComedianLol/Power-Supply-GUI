@@ -41,14 +41,16 @@ void MainWindow::on_btnUpdateOCP_clicked()
 void MainWindow::on_portQuery_clicked()
 {
     serial serial1;
-    QStringList QStringListPorts = serial1.openPort();
+    QStringList QStringListPorts = serial1.queryPort();
 
     ui->comboBox->clear();
     ui->comboBox->addItems(QStringListPorts);
 }
 
+// Open port that is currently shown in the QStringListPorts
 void MainWindow::on_btnOpenPort_clicked()
 {
-
+    serial serial1;
+    serial1.loadPort(ui->comboBox->currentText());
 }
 

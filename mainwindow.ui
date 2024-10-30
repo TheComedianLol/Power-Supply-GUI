@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>622</width>
-    <height>483</height>
+    <width>672</width>
+    <height>475</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>570</x>
       <y>350</y>
       <width>89</width>
       <height>74</height>
@@ -155,11 +155,21 @@
      <rect>
       <x>481</x>
       <y>21</y>
-      <width>126</width>
-      <height>91</height>
+      <width>178</width>
+      <height>106</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_3">
+     <item row="1" column="0">
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QToolButton" name="btnOpenPort">
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0" colspan="2">
       <widget class="QSplitter" name="splitter">
        <property name="orientation">
@@ -177,15 +187,15 @@
        </widget>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QComboBox" name="comboBox"/>
-     </item>
-     <item row="1" column="1">
-      <widget class="QToolButton" name="btnOpenPort">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label">
        <property name="text">
-        <string>Open</string>
+        <string>Port Status</string>
        </property>
       </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="txtPortStatus"/>
      </item>
     </layout>
    </widget>
@@ -195,8 +205,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>622</width>
-     <height>22</height>
+     <width>672</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHANMATEK_PROGRAMMABLE_POWER_SUPPLY">
