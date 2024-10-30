@@ -33,6 +33,8 @@ private slots:
 
     void on_btnOpenPort_clicked();
 
+    void on_btnDiagSerialSend_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

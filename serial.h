@@ -8,10 +8,11 @@ class serial
 {
 public:
     serial();
+    ~serial();
 
     QStringList queryPort();
     QString     loadPort(QString setPort);
-    void        writeSerial();
+    void     writeSerial(QString userSerialData);
     QString     readSerial();
     void        closeSerial();
 

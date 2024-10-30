@@ -1,7 +1,9 @@
 #include "serial.h"
+#include "QMessageBox"
 
 //MUST HAVE CONTRUCTOR
 serial::serial(){}
+serial::~serial(){}
 
 // Retrieves a list of the availible serial ports and returns
 QStringList serial::queryPort()
@@ -30,9 +32,9 @@ QString serial::loadPort(QString port)
         delete _serialPort;
     }
 
+    // Serial port communication settings                                 //BUGBUG might need faster comm if sending waveform data
     _serialPort = new QSerialPort(this);    // Pass this as the parent
     _serialPort->setPortName(port);
-    _serialPort->QSerialPort::Baud9600;
     _serialPort->setBaudRate(QSerialPort::Baud9600);
     _serialPort->setDataBits(QSerialPort::Data8);
     _serialPort->setParity(QSerialPort::EvenParity);
@@ -49,9 +51,19 @@ QString serial::loadPort(QString port)
 
 }
 
-void serial::writeSerial()
+void serial::writeSerial(QString userSerialData)
 {
 
+    QString data = userSerialData;
+
+    if (!_serialPort->isOpen())
+    {
+        QMessageBox::critical(nullptr, "Port Error", "Port is not opened"); //Should be "this" rather than "nullptr"
+        return;
+    }
+
+    // If successful
+    _serialPort->write(data);
 }
 
 QString serial::readSerial()

@@ -56,3 +56,9 @@ void MainWindow::on_btnOpenPort_clicked()
     serial1.loadPort(ports);
 }
 
+
+void MainWindow::on_btnDiagSerialSend_clicked()
+{
+
+}
+
