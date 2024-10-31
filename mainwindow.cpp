@@ -56,9 +56,11 @@ void MainWindow::on_btnOpenPort_clicked()
     serial1.loadPort(ports);
 }
 
-
+// Send raw serial over the com port requested, in the diagnostics tab
 void MainWindow::on_btnDiagSerialSend_clicked()
 {
-
+    QString data = ui->txtDiagSerialData->text();
+    serial serial1;
+    serial1.writeSerial(data);
 }
 
