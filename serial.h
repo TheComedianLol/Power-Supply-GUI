@@ -8,8 +8,10 @@ class serial
 {
 public:
     serial();
-    void openPort();
-    // ~openPort();
+    QStringList openPort();
+
+    // ~serial();
+    // QStringList ~openPort();
 
 private:
     // VARIABLES

@@ -1,12 +1,18 @@
 #include "serial.h"
-#include "mainwindow.h"
 
-/*
-void openPort()
+// CONSTRUCTOR MUST HAVE
+serial::serial(){}
+
+QStringList serial::openPort()
 {
-    foreach (auto &port, QSerialPortInfo::availablePorts())
+    // QStringList will store the array on the heap using aloc and returns a pointer to that memory (Memory Safe)
+    QStringList portList;
+
+    foreach(auto &ports, QSerialPortInfo::availablePorts())
     {
-        Ui->cmbPorts->addItem(port.portName());
+        portList.append(ports.portName());
     }
+
+    return portList;
 }
-*/
+

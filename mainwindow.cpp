@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "serial.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,9 +40,13 @@ void MainWindow::on_btnUpdateOCP_clicked()
 // Query for availible ports
 void MainWindow::on_portQuery_clicked()
 {
-    // Calling the method and creating an instance
+    // Call method to retrieve lists
     serial serial1;
-    serial1.openPort();
+    QStringList ports = serial1.openPort();
+
+    // Clear combo box first in case it was populated then add availible com ports
+    ui->comboBox->clear();
+    ui->comboBox->addItems(ports);
 }
 
 void MainWindow::on_btnOpenPort_clicked()

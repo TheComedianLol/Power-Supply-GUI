@@ -1,7 +1,5 @@
 #include "modbus.h"
 #include "serial.h"
 
-Modbus::Modbus()
-{
-
-}
+// CONSTRUCTOR MUST HAVE
+Modbus::Modbus(){}
